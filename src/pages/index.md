@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Purple Orange Studios
-image: /img/home-jumbotron.jpg
+image: /img/chemex.jpg
 heading: Purple Orange
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
@@ -68,3 +68,4 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
+
