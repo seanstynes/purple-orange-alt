@@ -4,26 +4,16 @@ import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
-import Features from '../components/Features';
 import BlogRoll from '../components/BlogRoll';
 import HeaderImage from '../components/HeaderImage';
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
-export const IndexPageTemplate = ({
-	image,
-	title,
-	heading,
-	subheading,
-	mainpitch,
-	description,
-	intro
-}) => (
+export const IndexPageTemplate = ({ image, title, heading, subheading }) => (
 	<div>
 		{/* <HeaderImage image={image}></HeaderImage> */}
 		{heading}
-		<Img fixed={image}></Img>
+		<Img fluid={image} src={image}></Img>
 		{subheading}
-		<BlogRoll></BlogRoll>
+		{/* <BlogRoll></BlogRoll> */}
 	</div>
 );
 
@@ -49,9 +39,6 @@ const IndexPage = ({ data }) => {
 				title={frontmatter.title}
 				heading={frontmatter.heading}
 				subheading={frontmatter.subheading}
-				mainpitch={frontmatter.mainpitch}
-				description={frontmatter.description}
-				intro={frontmatter.intro}
 			/>
 		</Layout>
 	);
@@ -81,25 +68,6 @@ export const pageQuery = graphql`
 				}
 				heading
 				subheading
-				mainpitch {
-					title
-					description
-				}
-				description
-				intro {
-					blurbs {
-						image {
-							childImageSharp {
-								fluid(maxWidth: 240, quality: 64) {
-									...GatsbyImageSharpFluid
-								}
-							}
-						}
-						text
-					}
-					heading
-					description
-				}
 			}
 		}
 	}
