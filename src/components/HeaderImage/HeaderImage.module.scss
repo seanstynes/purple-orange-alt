@@ -1,0 +1,45 @@
+@import '../../scss/variables.scss';
+
+.headerImage {
+	height: 40rem;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// .gatsby {
+	// 	object-fit: cover;
+	// 	height: 40rem;
+	// 	width: 100%;
+	// 	position: absolute;
+	// }
+	.gatsby-image-wrapper,
+	.image,
+	img,
+	picture {
+		width: 100%;
+	}
+	h2 {
+		margin-top: 12rem;
+
+		@include tablet-up {
+			margin-top: 0;
+		}
+	}
+	h2,
+	p {
+		color: #fff;
+		position: relative;
+		z-index: 2;
+		text-align: center;
+	}
+	&:after {
+		content: '';
+		background: darken($color-primary, 40%);
+		opacity: 0.85;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}

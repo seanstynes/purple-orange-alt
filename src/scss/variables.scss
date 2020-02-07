@@ -1,0 +1,77 @@
+@mixin padding-large {
+	padding: 5.4rem 5.4rem;
+}
+@mixin padding-medium {
+	padding: 3.2rem 3.2rem;
+}
+@mixin padding-large-vertical {
+	padding-top: 5.4rem;
+	padding-bottom: 5.4rem;
+}
+@mixin padding-medium-vertical {
+	padding-top: 3.2rem;
+	padding-bottom: 3.2rem;
+}
+
+$color-gray: #f5f5f5;
+$color-primary: #6e53a2;
+$color-primary-dark: darken($color-primary, 30%);
+
+// Responsive media queries
+// Use -up media queries when possible for efficient use of css
+// For basic media queries only use tablet-up to create simplicity
+@mixin mobile-small-up {
+	@media (min-width: 320px) {
+		@content;
+	}
+}
+@mixin mobile-up {
+	@media (min-width: 480px) {
+		@content;
+	}
+}
+@mixin mobile-down {
+	@media (max-width: 479px) {
+		@content;
+	}
+}
+@mixin tablet-small-up {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+@mixin tablet-small-down {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
+@mixin tablet-up {
+	@media (min-width: 1024px) {
+		@content;
+	}
+}
+@mixin tablet-down {
+	@media (max-width: 1023px) {
+		@content;
+	}
+}
+@mixin desktop-up {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+@mixin desktop-down {
+	@media (max-width: 1199px) {
+		@content;
+	}
+}
+@mixin desktop-large-up {
+	@media (min-width: 1800px) {
+		@content;
+	}
+}
+@mixin desktop-large-down {
+	@media (min-width: 1799px) {
+		@content;
+	}
+}

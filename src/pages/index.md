@@ -1,8 +1,8 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: Purple Orange Studios
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
+heading: Purple Orange
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
   title: Purple Orange Studios
