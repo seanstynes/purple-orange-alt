@@ -9,7 +9,7 @@ const HeaderImage = props => {
 	return (
 		<div className={css.headerImage}>
 			<div className={css.imageWrap}>
-				<Img fixed={image} />
+				<Img fixed={image} style={{ objectFit: 'cover' }} />
 			</div>
 			<div className='container'>
 				<h2>{heading}</h2>

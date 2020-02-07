@@ -9,7 +9,7 @@ class BlogRoll extends React.Component {
 		const { edges: posts } = data.allMarkdownRemark;
 
 		return (
-			<div>
+			<section className='container'>
 				{posts &&
 					posts.map(({ node: post }) => (
 						<div key={post.id}>
@@ -32,7 +32,7 @@ class BlogRoll extends React.Component {
 							</article>
 						</div>
 					))}
-			</div>
+			</section>
 		);
 	}
 }
