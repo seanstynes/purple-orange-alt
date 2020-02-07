@@ -1,0 +1,50 @@
+@import '../../scss/variables.scss';
+.header {
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 2rem 0;
+	z-index: 3;
+	&.solid {
+		color: #000;
+		background: $color-gray;
+		position: relative;
+	}
+	// border-bottom: .1rem solid #ddd;
+	.logo {
+		svg {
+			width: 5rem;
+			height: 5rem;
+			margin-right: 1rem;
+			stroke: $color-primary;
+		}
+	}
+	h1 {
+		font-size: 2rem;
+		font-weight: bolder;
+		text-transform: lowercase;
+		letter-spacing: 0.2rem;
+	}
+	.inner {
+		@include tablet-up {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+	nav {
+		a {
+			color: #fff;
+			text-decoration: none;
+			margin-left: 2rem;
+			transition: all 0.4s ease;
+			&:hover,
+			&:focus {
+				opacity: 0.8;
+			}
+		}
+	}
+}

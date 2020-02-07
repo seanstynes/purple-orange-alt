@@ -7,6 +7,7 @@ body {
 	font-size: 1.8rem;
 	font-family: 'Raleway', sans-serif;
 	line-height: 1.4;
+	margin: 0;
 }
 p {
 	margin: 2.4rem 0;
@@ -40,6 +41,12 @@ input[type='submit'] {
 
 .center {
 	text-align: center;
+}
+
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+	width: calc(100% - 3.2rem);
 }
 
 .section,

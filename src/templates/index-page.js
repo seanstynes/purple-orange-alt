@@ -9,11 +9,13 @@ import HeaderImage from '../components/HeaderImage';
 
 export const IndexPageTemplate = ({ image, title, heading, subheading }) => (
 	<div>
-		{/* <HeaderImage image={image}></HeaderImage> */}
-		{heading}
-		<Img fluid={image} src={image}></Img>
-		{subheading}
-		{/* <BlogRoll></BlogRoll> */}
+		<HeaderImage
+			heading={heading}
+			subheading={subheading}
+			image={image.childImageSharp.fixed}
+		></HeaderImage>
+
+		<BlogRoll></BlogRoll>
 	</div>
 );
 
@@ -61,8 +63,8 @@ export const pageQuery = graphql`
 				title
 				image {
 					childImageSharp {
-						fluid(maxWidth: 120, quality: 100) {
-							...GatsbyImageSharpFluid
+						fixed(width: 2000, height: 400, quality: 100) {
+							...GatsbyImageSharpFixed
 						}
 					}
 				}

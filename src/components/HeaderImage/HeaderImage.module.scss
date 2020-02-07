@@ -6,18 +6,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	// .gatsby {
-	// 	object-fit: cover;
-	// 	height: 40rem;
-	// 	width: 100%;
-	// 	position: absolute;
-	// }
-	.gatsby-image-wrapper,
-	.image,
-	img,
-	picture {
+	.imageWrap {
+		object-fit: cover;
+		height: 40rem;
 		width: 100%;
+		position: absolute;
 	}
+
 	h2 {
 		margin-top: 12rem;
 
